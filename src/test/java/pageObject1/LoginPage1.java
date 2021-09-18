@@ -23,7 +23,7 @@ public WebDriver ldriver;
 	@CacheLookup
 	WebElement txtPassword;
 	
-	@FindBy(xpath="//input[@class='button-1 login-button']")
+	@FindBy(xpath="//button[normalize-space()='Log in']")
 	@CacheLookup
 	WebElement btnLogin;
 	

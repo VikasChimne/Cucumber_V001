@@ -7,13 +7,18 @@ import io.cucumber.junit.CucumberOptions;
 
 	@RunWith(Cucumber.class)
 	@CucumberOptions
-	     (features = "FeaturesFile/Login1.feature", 
+	     (
+	    		 features ={".//FeaturesFile/Customers.feature"}, 
 	                 glue = "stepDefination",
 	                 dryRun = false,
 	                 monochrome = true,
-	                 plugin = {"pretty","html:test-output"}
-	                // tags = {"@CustomerSearchByName"}
+	                 plugin = {"pretty",
+	        	       		  "html:target/html/htmlreport.html",
+	          	  			"json:target/json/file.json",}
+	             
+                    // tags = {"@sanity, @regression"}
 	      )
+	
 public class TestRunner1 {
 
 }

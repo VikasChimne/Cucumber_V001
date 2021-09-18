@@ -11,7 +11,7 @@ import pageObject1.AddCustomerPage1;
 import pageObject1.LoginPage1;
 import pageObject1.SearchcustomerPage1;
 
-public class BaseClass1 {
+public class BaseClass1 {//Here we put only Common things
 	public WebDriver driver;
 	public LoginPage1 lp;
 	public AddCustomerPage1 acp;
@@ -19,8 +19,9 @@ public class BaseClass1 {
 	public Logger logger;
 	public Properties prop;
 	
-	public static String randomestring() {
-		String generatedString = RandomStringUtils.randomAlphabetic(5);
+	//Created for generating random string for Unique email id
+	public static String randomestring() {//java method,predefined class
+		String generatedString = RandomStringUtils.randomAlphabetic(5);//5 charector
 		return generatedString;		
 	}
 }
